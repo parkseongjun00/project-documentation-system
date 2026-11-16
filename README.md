@@ -24,3 +24,47 @@
 - 문서를 편집할 때는 [WritingGuide.md](docs/WritingGuide.md)와 대상 문서의 일러두기를 확인합니다.
 - 병행 세션은 각자 [논의 초안 양식](docs/DiscussionDrafts/Template.md)을 복사해 자기 파일을 갱신합니다.
 - [SKILL.md](SKILL.md)는 Codex가 사용자 설명과 기존 자료를 바탕으로 실제 프로젝트 문서를 작성할 때 사용하는 절차입니다. [AGENTS.md](AGENTS.md)는 이 저장소에서 적용하는 작업 지침입니다.
+
+## 3. Codex에서 프로젝트별 설치
+
+대상 프로젝트의 루트 폴더를 터미널에서 열고 아래 블록 전체를 붙여넣습니다. Git과 GitHub 접근이 필요합니다. Linux의 Bash 또는 Windows의 Git Bash에서 실행합니다.
+
+```bash
+(
+  set -eu
+  skill_dir=.agents/skills/project-documentation-system
+
+  if [ -e "$skill_dir" ] || [ -L "$skill_dir" ]; then
+    printf '%s\n' "Already exists: $skill_dir" >&2
+    exit 1
+  fi
+
+  mkdir -p .agents/skills
+  work_dir=$(mktemp -d "$PWD/.agents/.project-documentation-system.XXXXXX")
+  case "$work_dir" in
+    "$PWD"/.agents/.project-documentation-system.*) ;;
+    *) exit 1 ;;
+  esac
+  trap 'rm -rf -- "$work_dir"' EXIT
+
+  git clone --depth 1 https://github.com/parkseongjun00/project-documentation-system.git "$work_dir/source"
+  mkdir "$work_dir/skill"
+  cp "$work_dir/source/SKILL.md" "$work_dir/skill/"
+  cp -R "$work_dir/source/docs" "$work_dir/skill/"
+  mv -nT -- "$work_dir/skill" "$skill_dir"
+  if [ -d "$work_dir/skill" ]; then
+    printf '%s\n' "Already exists: $skill_dir" >&2
+    exit 1
+  fi
+
+  printf '%s\n' "Installed: $skill_dir"
+)
+```
+
+설치 후 같은 프로젝트 폴더에서 Codex를 시작합니다. 터미널에서 시작하려면 `codex`를 실행합니다. Codex가 이미 열려 있다면 같은 프로젝트에서 새 세션을 열고 다음과 같이 요청합니다.
+
+```text
+$project-documentation-system 현재 프로젝트의 기존 문서를 확인하고 문서 체계를 도입해줘.
+```
+
+설치 블록은 스킬과 참조용 문서를 `.agents/skills/project-documentation-system/`에 넣습니다. 같은 이름의 폴더가 있으면 기존 설치를 보존합니다. 실제 프로젝트 문서의 이식은 스킬을 호출할 때 진행합니다.
