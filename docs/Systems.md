@@ -4,7 +4,12 @@
 
 ## 0. 일러두기
 
-프로젝트에 포함되는 시스템·기능의 범위 목록이다. 상세 규칙은 [ProjectSpec.md](ProjectSpec.md), 구현 순서와 일정은 [DevPlan.md](DevPlan.md)에서 관리한다.
+| 항목 | 내용 |
+|---|---|
+| 버전 | |
+| 작성일 | |
+| 기반 문서 | [ProjectSpec.md](ProjectSpec.md) |
+| 역할 | 프로젝트에 포함되는 시스템·기능의 범위 목록. 상세 규칙은 ProjectSpec, 구현 순서와 일정은 [DevPlan](DevPlan.md)에서 관리한다. |
 
 ---
 
