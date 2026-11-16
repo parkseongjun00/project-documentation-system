@@ -37,4 +37,4 @@ mkdir .agents/skills/project-documentation-system &&
 cp -R "$src/SKILL.md" "$src/docs" .agents/skills/project-documentation-system/
 ```
 
-같은 프로젝트에서 새 Codex 세션을 열고 `$project-documentation-system 현재 프로젝트에 문서 체계를 도입해줘.`라고 요청합니다.
+같은 프로젝트에서 새 Codex 세션을 열고 필요한 문서 작업을 바로 요청합니다. 예를 들어 `$project-documentation-system 지금까지 논의한 내용으로 ProjectSpec.md를 작성해줘.`라고 요청합니다.
