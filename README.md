@@ -1,17 +1,26 @@
 # Project Documentation System
 
-프로젝트의 문제와 목표를 정의하고, 기능 범위·구현 순서·결정 이력·현재 작업 상태를 함께 관리하는 문서 체계입니다. 이 저장소는 체계 자체를 설명하면서 첫 적용 사례도 제공합니다.
+프로젝트의 문제와 목표, 설계 기준, 기능 범위, 작업 순서, 결정 이력, 현재 작업 상태를 관리하는 문서 템플릿입니다. [문서 체계](docs/DocSystem.md)에서 문서별 역할, 편집 방식, 이관 조건을 확인할 수 있습니다.
 
-## 1. 시작하기
+## 1. 사용 방법
 
-1. [문서 체계](docs/DocSystem.md)에서 각 문서의 역할과 정보가 이동하는 조건을 확인합니다.
-2. [프로젝트 명세](docs/ProjectSpec.md)에서 문제와 목표, 해결 방향, 동작 규칙과 제약을 정리합니다.
-3. 구현 범위는 [시스템·기능 목록](docs/Systems.md), 작업 순서는 [개발 계획](docs/DevPlan.md), 이번 작업은 [인수인계](docs/HANDOFF.md)에서 확인합니다.
+1. 필요한 문서를 프로젝트 문서 폴더에 복사합니다. 여러 문서를 함께 복사할 때는 상대 링크가 유지되도록 폴더 구조를 유지합니다.
+2. 일러두기와 목차를 읽고, 해당 프로젝트의 내용으로 본문을 채웁니다.
+3. 기존 문서나 이슈 트래커가 같은 역할을 맡고 있다면 해당 위치를 문서 지도에 연결합니다.
 
-## 2. 여러 작업을 함께 진행할 때
+| 작업 | 사용할 문서 |
+|---|---|
+| 문제와 목표, 해결 방향, 동작 규칙과 제약을 정한다 | [ProjectSpec.md](docs/ProjectSpec.md) |
+| 구현 범위를 정리한다 | [Systems.md](docs/Systems.md) |
+| 작업 묶음별 구현·확장 순서를 정한다 | [DevPlan.md](docs/DevPlan.md) |
+| 결정과 그 사유를 보존한다 | [개발 노트](docs/DevNotes/README.md) · [양식](docs/DevNotes/Template.md) |
+| 다시 다룰 과제를 보존한다 | [Backlog.md](docs/Backlog.md) |
+| 다음 세션에 현재 작업을 넘긴다 | [HANDOFF.md](docs/HANDOFF.md) |
+| 세션별 논의·검토 내용을 적는다 | [논의 초안](docs/DiscussionDrafts/README.md) · [양식](docs/DiscussionDrafts/Template.md) |
+| 문제의 조사 경로와 시행착오를 보존한다 | [트러블슈팅](docs/Troubleshooting/README.md) · [양식](docs/Troubleshooting/Template.md) |
 
-세션마다 [논의 초안 폴더](docs/DiscussionDrafts/README.md)에 고유한 파일을 만들고 자기 파일을 갱신합니다. 확정된 내용은 해당 기준 문서나 결정 기록으로 옮깁니다.
+## 2. 작성 규칙
 
-## 3. Codex로 문서 작성하기
-
-[SKILL.md](SKILL.md)는 사용자의 설명과 기존 자료를 읽고, 프로젝트 문서의 본문을 쓰거나 갱신하는 초안 절차입니다. [AGENTS.md](AGENTS.md)는 이 저장소를 편집할 때 적용하는 규칙입니다.
+- 문서를 편집할 때는 [WritingGuide.md](docs/WritingGuide.md)와 대상 문서의 일러두기를 확인합니다.
+- 병행 세션은 각자 [논의 초안 양식](docs/DiscussionDrafts/Template.md)을 복사해 자기 파일을 갱신합니다.
+- [SKILL.md](SKILL.md)는 Codex가 사용자 설명과 기존 자료를 바탕으로 실제 프로젝트 문서를 작성할 때 사용하는 절차입니다. [AGENTS.md](AGENTS.md)는 이 저장소에서 적용하는 작업 지침입니다.

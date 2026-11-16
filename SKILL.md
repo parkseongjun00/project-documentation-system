@@ -15,7 +15,7 @@ Apply this workflow when the user wants a project documentation system or asks t
 
 ## 2. Fill the document
 
-1. Provide a short preface and useful headings for a new document. For a project specification, begin with problem and goal, solution direction, and behavior and constraints. Break down a complex problem where the distinctions affect the design.
+1. Copy the relevant template into the target project and retain its preface and applicable headings. For an existing document, use its established structure. For a project specification, begin with problem and goal, solution direction, and behavior and constraints. Break down a complex problem where the distinctions affect the design.
 2. Write substantive content from the evidence at hand. Put detailed behavior in the specification, included capabilities in the feature scope, and work order in the implementation plan.
 3. Mark open choices where they matter. Ask about missing information only when the answer would change the specification, scope, or next action. Give the user the draft and the decisions still needed.
 4. When actual behavior differs from an approved rule, describe the rule, the observation, and the impact. Apply the user's chosen resolution to the affected documents.
