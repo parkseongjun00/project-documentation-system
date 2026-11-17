@@ -23,7 +23,7 @@
 
 - 문서를 편집할 때는 [WritingGuide.md](docs/WritingGuide.md)와 대상 문서의 일러두기를 확인합니다.
 - 병행 세션은 각자 [논의·검토 초안](docs/DiscussionDraft.md)을 복사해 자기 파일을 갱신합니다.
-- [SKILL.md](SKILL.md)는 Codex가 사용자 설명과 기존 자료를 바탕으로 실제 프로젝트 문서를 작성할 때 사용하는 절차입니다. [AGENTS.md](AGENTS.md)는 이 저장소에서 적용하는 작업 지침입니다.
+- [SKILL.md](SKILL.md)는 Codex가 대상 프로젝트에 전체 문서 양식을 복사하는 절차입니다. [AGENTS.md](AGENTS.md)는 이 저장소에서 적용하는 작업 지침입니다.
 
 ## 3. Codex에서 프로젝트별 설치
 
@@ -37,4 +37,4 @@ mkdir .agents/skills/project-documentation-system &&
 cp -R "$src/SKILL.md" "$src/docs" .agents/skills/project-documentation-system/
 ```
 
-같은 프로젝트에서 새 Codex 세션을 열고 필요한 문서 작업을 요청합니다. 설치 경로의 `docs/`는 양식과 참고 자료이며, 실제 작업 문서는 대상 프로젝트의 문서 위치에 작성합니다. 예를 들어 `$project-documentation-system 지금까지 논의한 내용으로 ProjectSpec.md를 작성해줘.`라고 요청합니다.
+같은 프로젝트에서 새 Codex 세션을 열고 `$project-documentation-system 이 프로젝트에 문서 체계를 구축해줘.`라고 요청합니다. 스킬은 설치 경로의 `docs/` 전체를 대상 프로젝트의 `docs/`에 복사합니다. 같은 경로에 있는 기존 파일은 보존합니다. 구축 후에는 필요한 문서를 지정해 작성이나 갱신을 요청합니다.

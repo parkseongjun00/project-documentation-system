@@ -1,27 +1,20 @@
 ---
 name: project-documentation-system
-description: Set up or adapt a project documentation system, or draft and update its project specification, feature scope, decisions, and session handoff from supplied evidence. Use when the user asks to apply this document workflow or to write these project records.
+description: 사용자가 프로젝트 문서 체계 구축을 요청하면 대상 프로젝트에 전체 문서 양식을 복사한다. 같은 경로에 이미 있는 파일은 보존한다.
 ---
 
-# Project documentation system
+# 프로젝트 문서 체계 구축
 
-Apply this workflow when the user wants a project documentation system or asks to write a document governed by that system. Use the project language and its approved conventions.
+## 1. 복사 위치 확인
 
-## 1. Find the relevant sources
+이 `SKILL.md` 옆의 [docs/](docs/)를 양식 원본으로 사용한다. 사용자가 지정한 문서 폴더를 대상으로 삼고, 지정이 없으면 대상 프로젝트 루트의 `docs/`를 사용한다.
 
-1. Read the target project's instructions and check its current documents before proposing a layout. Map existing files and trackers to their roles. Use [the document map](docs/DocumentationSystem.md) when choosing where material belongs.
-2. Read the target document's preface and the relevant sources. Use user-provided context, approved decisions, existing specifications, and observed implementation as distinct evidence.
-3. Match the requested scope. For a review, return proposed changes. For an authorized edit, write the requested documents and preserve the project's established names, links, and records where they fit.
+## 2. 전체 양식 복사
 
-## 2. Fill the document
+원본 `docs/`의 모든 파일과 하위 폴더를 대상 문서 폴더로 복사한다. `docs/`를 대상 폴더 아래에 한 번 더 만들지 않고, 원본 내부의 상대 경로와 파일 내용을 그대로 유지한다.
 
-1. Copy the relevant template into the target project and retain its preface and applicable headings. For an existing document, use its established structure. For a new project specification, use the headings in [ProjectSpec.md](docs/ProjectSpec.md) and follow its writing guidance. Break down a complex problem where the distinctions affect the design.
-2. Write substantive content from the evidence at hand. Put detailed behavior in the specification, included capabilities in the feature scope, and work order in the implementation plan.
-3. Mark open choices where they matter. Ask about missing information only when the answer would change the specification, scope, or next action. Give the user the draft and the decisions still needed.
-4. When actual behavior differs from an approved rule, describe the rule, the observation, and the impact. Apply the user's chosen resolution to the affected documents.
+대상 상대 경로에 파일이 이미 있으면 그대로 두고 그 파일만 건너뛴다. 같은 이름의 디렉터리는 재사용하고, 대상 경로의 파일·디렉터리 유형이 달라 복사할 수 없는 항목은 그 경로와 이유를 기록한다. 나머지 항목은 계속 복사한다.
 
-## 3. Carry work across sessions
+## 3. 구축 결과 보고
 
-1. When parallel work needs a draft, use the assigned session file or copy [the discussion draft](docs/DiscussionDraft.md) to a unique file. Record the owner and request in its work context, and keep working notes in that file.
-2. Move confirmed rules, decisions, and findings into their long-term homes as authorized. When a decision changes, add a follow-up record and link from the affected earlier record.
-3. Summarize the result, verification, and open items for handoff. Coordinate changes to shared documents when sessions are working in parallel. Read [the writing guide](docs/WritingGuide.md) for the current format.
+대상 폴더와 추가한 파일, 기존에 있어 건너뛴 파일을 경로와 함께 알려준다. 복사할 수 없었던 항목이 있다면 그 이유를 보고한다. 복사 결과를 확인하면 구축을 마친다.
