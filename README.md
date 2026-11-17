@@ -37,7 +37,7 @@
 | 설치 이름 | 용도 | 함께 복사할 파일 |
 | --- | --- | --- |
 | `project-documentation-system` | 전체 문서 양식 복사 | 루트 `SKILL.md`, `docs/` 전체 |
-| `requirements-review` | 현재 질문과 근거 문서를 대조하는 질문 검토 초안 | `skills/requirements-review/` 전체와 그 안의 `LICENSE` |
+| `requirements-review` | 구현 전 해결 방향·계획을 근거 문서와 대조하고 질문으로 점검하는 초안 | `skills/requirements-review/` 전체와 그 안의 `LICENSE` |
 | `security-audit` | Cloudflare의 소스 기반 보안 검토 | `skills/security-audit/` 전체와 그 안의 `LICENSE`, 보조 문서·검증 파일 |
 
 **최초 설치**는 대상 프로젝트의 루트에서 아래 명령을 Bash로 실행합니다. Windows에서는 Git Bash를 사용합니다. 기본 경로는 Git과 GitHub 접근이 필요합니다.
