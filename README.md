@@ -9,7 +9,7 @@
 3. 기존 문서나 이슈 트래커가 같은 역할을 맡고 있다면 해당 위치를 문서 지도에 연결합니다.
 
 | 작업 | 사용할 문서 |
-|---|---|
+| --- | --- |
 | 문제와 목표, 해결 방향, 동작 규칙과 제약을 정한다 | [ProjectSpec.md](docs/ProjectSpec.md) |
 | 구현 범위를 정리한다 | [Systems.md](docs/Systems.md) |
 | 작업 묶음별 구현·확장 순서를 정한다 | [DevPlan.md](docs/DevPlan.md) |
