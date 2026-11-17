@@ -22,6 +22,6 @@ Apply this workflow when the user wants a project documentation system or asks t
 
 ## 3. Carry work across sessions
 
-1. When parallel work needs a draft, use the assigned session file or create a unique file following [the draft rules](docs/DiscussionDrafts/README.md). Record the owner and request, and keep working notes in that file.
+1. When parallel work needs a draft, use the assigned session file or copy [the discussion draft](docs/DiscussionDraft.md) to a unique file. Record the owner and request in its work context, and keep working notes in that file.
 2. Move confirmed rules, decisions, and findings into their long-term homes as authorized. When a decision changes, add a follow-up record and link from the affected earlier record.
 3. Summarize the result, verification, and open items for handoff. Coordinate changes to shared documents when sessions are working in parallel. Read [the writing guide](docs/WritingGuide.md) for the current format.

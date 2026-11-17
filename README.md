@@ -16,13 +16,13 @@
 | 결정과 그 사유를 보존한다 | [개발 노트](docs/DevNotes/README.md) · [양식](docs/DevNotes/Template.md) |
 | 다시 다룰 과제를 보존한다 | [Backlog.md](docs/Backlog.md) |
 | 다음 세션에 현재 작업을 넘긴다 | [HANDOFF.md](docs/HANDOFF.md) |
-| 세션별 논의·검토 내용을 적는다 | [논의 초안](docs/DiscussionDrafts/README.md) · [양식](docs/DiscussionDrafts/Template.md) |
+| 세션별 논의·검토 내용을 적는다 | [논의·검토 초안](docs/DiscussionDraft.md) |
 | 문제의 조사 경로와 시행착오를 보존한다 | [트러블슈팅](docs/Troubleshooting/README.md) · [양식](docs/Troubleshooting/Template.md) |
 
 ## 2. 작성 규칙
 
 - 문서를 편집할 때는 [WritingGuide.md](docs/WritingGuide.md)와 대상 문서의 일러두기를 확인합니다.
-- 병행 세션은 각자 [논의 초안 양식](docs/DiscussionDrafts/Template.md)을 복사해 자기 파일을 갱신합니다.
+- 병행 세션은 각자 [논의·검토 초안](docs/DiscussionDraft.md)을 복사해 자기 파일을 갱신합니다.
 - [SKILL.md](SKILL.md)는 Codex가 사용자 설명과 기존 자료를 바탕으로 실제 프로젝트 문서를 작성할 때 사용하는 절차입니다. [AGENTS.md](AGENTS.md)는 이 저장소에서 적용하는 작업 지침입니다.
 
 ## 3. Codex에서 프로젝트별 설치
