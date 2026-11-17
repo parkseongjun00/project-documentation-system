@@ -1,6 +1,6 @@
 # Project Documentation System
 
-프로젝트의 문제와 목표, 설계 기준, 기능 범위, 작업 순서, 결정 이력, 현재 작업 상태를 관리하는 문서 템플릿입니다. [문서 체계](docs/DocSystem.md)에서 문서별 역할, 편집 방식, 이관 조건을 확인할 수 있습니다.
+프로젝트의 문제와 목표, 설계 기준, 기능 범위, 작업 순서, 결정 이력, 현재 작업 상태를 관리하는 문서 템플릿입니다. [문서 체계](docs/DocumentationSystem.md)에서 문서별 역할, 편집 방식, 이관 조건을 확인할 수 있습니다.
 
 ## 1. 사용 방법
 
@@ -10,9 +10,9 @@
 
 | 작업 | 사용할 문서 |
 | --- | --- |
-| 문제와 목표, 해결 방향, 동작 규칙과 제약을 정한다 | [ProjectSpec.md](docs/ProjectSpec.md) |
+| 문제와 목표, 해결 방향, 요구사항·제약·제출 조건을 정한다 | [ProjectSpec.md](docs/ProjectSpec.md) |
 | 구현 범위를 정리한다 | [Systems.md](docs/Systems.md) |
-| 작업 묶음별 구현·확장 순서를 정한다 | [DevPlan.md](docs/DevPlan.md) |
+| 필수 작업의 순서와 확인 기준을 정한다 | [DevPlan.md](docs/DevPlan.md) |
 | 결정과 그 사유를 보존한다 | [개발 노트](docs/DevNotes/README.md) · [양식](docs/DevNotes/Template.md) |
 | 다시 다룰 과제를 보존한다 | [Backlog.md](docs/Backlog.md) |
 | 다음 세션에 현재 작업을 넘긴다 | [HANDOFF.md](docs/HANDOFF.md) |
@@ -37,4 +37,4 @@ mkdir .agents/skills/project-documentation-system &&
 cp -R "$src/SKILL.md" "$src/docs" .agents/skills/project-documentation-system/
 ```
 
-같은 프로젝트에서 새 Codex 세션을 열고 필요한 문서 작업을 바로 요청합니다. 예를 들어 `$project-documentation-system 지금까지 논의한 내용으로 ProjectSpec.md를 작성해줘.`라고 요청합니다.
+같은 프로젝트에서 새 Codex 세션을 열고 필요한 문서 작업을 요청합니다. 설치 경로의 `docs/`는 양식과 참고 자료이며, 실제 작업 문서는 대상 프로젝트의 문서 위치에 작성합니다. 예를 들어 `$project-documentation-system 지금까지 논의한 내용으로 ProjectSpec.md를 작성해줘.`라고 요청합니다.
